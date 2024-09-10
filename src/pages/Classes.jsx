@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import Title from "../components/Title";
 
 function Classes() {
+	const navigate = useNavigate();
+
+	function onClassClick(className) {
+		navigate(`/classes/${className}`);
+	}
+
 	return (
 		<>
 			<div>
@@ -29,38 +36,47 @@ function Classes() {
 								</tr>
 							</thead>
 							<tbody>
-								<tr className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+								<tr
+									onClick={() => onClassClick("A1")}
+									className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+								>
 									<th
 										scope="row"
-										className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+										className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
 									>
 										1
 									</th>
-									<td className="px-6 py-4">A1</td>
-									<td className="px-6 py-4">2</td>
-									<td className="px-6 py-4">18:00 - 20:00</td>
+									<td className="px-6 py-3">A1</td>
+									<td className="px-6 py-3">2</td>
+									<td className="px-6 py-3">18:00 - 20:00</td>
 								</tr>
-								<tr className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+								<tr
+									onClick={() => onClassClick("A2")}
+									className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+								>
 									<th
 										scope="row"
-										className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+										className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
 									>
 										2
 									</th>
-									<td className="px-6 py-4">A2</td>
-									<td className="px-6 py-4">4</td>
-									<td className="px-6 py-4">10:00 - 12:00</td>
+									<td className="px-6 py-3">A2</td>
+									<td className="px-6 py-3">4</td>
+									<td className="px-6 py-3">10:00 - 12:00</td>
 								</tr>
-								<tr className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white dark:bg-gray-800">
+								<tr
+									onClick={() => onClassClick("A3")}
+									className="cursor-pointer dark:hover:bg-gray-700 hover:bg-gray-200 bg-white dark:bg-gray-800"
+								>
 									<th
 										scope="row"
-										className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+										className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
 									>
 										3
 									</th>
-									<td className="px-6 py-4">A3</td>
-									<td className="px-6 py-4">1</td>
-									<td className="px-6 py-4">08:00 - 10:00</td>
+									<td className="px-6 py-3">A3</td>
+									<td className="px-6 py-3">1</td>
+									<td className="px-6 py-3">08:00 - 10:00</td>
 								</tr>
 							</tbody>
 						</table>

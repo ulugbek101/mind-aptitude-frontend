@@ -20,7 +20,7 @@ function Navbar() {
 							</span>
 						</div>
 						<NavLink
-							to="/"
+							to="/classes"
 							className={({ isActive }) =>
 								`${
 									isActive && "bg-gray-700"
@@ -30,18 +30,7 @@ function Navbar() {
 							<i className="material-icons">book</i>
 							Classes
 						</NavLink>
-						<NavLink
-							to="/students"
-							className={({ isActive }) =>
-								`${
-									isActive && "bg-gray-700"
-								} flex items-center gap-4 rounded-md hover:bg-gray-700 px-3 py-2 text-sm font-medium text-white  active:scale-90 transition`
-							}
-						>
-							<i className="material-icons">school</i>
-							All students
-						</NavLink>
-						<NavLink
+						{/* <NavLink
 							to="/workshops"
 							className={({ isActive }) =>
 								`${
@@ -51,7 +40,7 @@ function Navbar() {
 						>
 							<i className="material-icons">note</i>
 							Workshops
-						</NavLink>
+						</NavLink> */}
 						<NavLink
 							to="/tests"
 							className={({ isActive }) =>
